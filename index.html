@@ -3,97 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LabancaSmart - Assistência Técnica em Pirituba</title>
-    <meta name="description" content="Assistência técnica especializada em TVs, celulares e notebooks em Pirituba. Orçamento rápido e atendimento de confiança.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>LabancaSmart - Assistência Técnica Especializada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #00AEEF;
+            padding: 15px;
+            text-align: center;
+        }
+        header img {
+            max-height: 80px;
+        }
+        nav {
+            background-color: #0077A3;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .map-container {
+            width: 100%;
+            height: 300px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        footer {
+            background-color: #00AEEF;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .contact-form button {
+            background: #00AEEF;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .call-button {
+            background: #28a745;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Cabeçalho -->
-    <header class="bg-blue-600 text-white p-5">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">LabancaSmart</h1>
-            <div class="flex gap-3">
-                <a href="https://wa.me/5511959351849" target="_blank" class="bg-green-500 px-4 py-2 rounded-lg font-semibold hover:bg-green-600">
-                    WhatsApp
-                </a>
-                <a href="tel:+5511959351849" class="bg-yellow-500 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-600">
-                    Ligar
-                </a>
-            </div>
-        </div>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LabancaSmart Logo">
     </header>
-
-    <!-- Banner -->
-    <section class="bg-gray-900 text-white text-center py-16">
-        <h2 class="text-3xl font-bold mb-2">Assistência Técnica em TVs e Eletrônicos</h2>
-        <p class="mb-4">Atendimento rápido, peças de qualidade e garantia no serviço.</p>
-        <a href="https://wa.me/5511959351849" target="_blank" class="bg-green-500 px-6 py-3 rounded-lg font-bold hover:bg-green-600">
-            Solicitar Orçamento
-        </a>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="#localizacao">Localização</a>
+    </nav>
+    <section id="sobre">
+        <h1>Bem-vindo à LabancaSmart</h1>
+        <p>Assistência técnica especializada em celulares, notebooks, videogames e muito mais!</p>
+        <a class="call-button" href="tel:+5511959351849">Ligue Agora</a>
     </section>
-
-    <!-- Serviços -->
-    <section class="py-12 container mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-6">Nossos Serviços</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h4 class="font-bold text-xl mb-2">Conserto de TVs</h4>
-                <p>Troca de LED, fonte, placas e ajustes de imagem e som.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h4 class="font-bold text-xl mb-2">Celulares e Notebooks</h4>
-                <p>Troca de tela, bateria e reparos avançados em placas.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h4 class="font-bold text-xl mb-2">Atendimento Domiciliar</h4>
-                <p>Coleta e entrega de TVs em Pirituba e região.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre -->
-    <section class="bg-blue-50 py-12">
-        <div class="container mx-auto text-center">
-            <h3 class="text-2xl font-bold mb-4">Por que escolher a LabancaSmart?</h3>
-            <p class="max-w-xl mx-auto">Estamos localizados na Av. do Anastácio, 1641 – Pirituba. Oferecemos atendimento personalizado, preços justos e garantia nos reparos. Nosso objetivo é sua satisfação e a vida longa dos seus aparelhos.</p>
-        </div>
-    </section>
-
-    <!-- Google Maps -->
-    <section class="py-12 container mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-6">Nossa Localização</h3>
-        <div class="w-full h-80">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.50824420802!2d-46.730563!3d-23.500503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sAv.%20do%20Anast%C3%A1cio%2C%201641%20-%20Pirituba%2C%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <!-- Formulário de contato -->
-    <section class="py-12 container mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-6">Entre em Contato</h3>
-        <form action="https://formspree.io/f/seu_form_id" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg space-y-4">
-            <input type="text" name="nome" placeholder="Seu nome" required class="w-full p-3 border rounded">
-            <input type="email" name="email" placeholder="Seu e-mail" required class="w-full p-3 border rounded">
-            <textarea name="mensagem" placeholder="Digite sua mensagem" required class="w-full p-3 border rounded"></textarea>
-            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700">
-                Enviar
-            </button>
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form class="contact-form" action="mailto:seuemail@dominio.com" method="POST" enctype="text/plain">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
         </form>
-        <p class="mt-4 text-sm text-gray-600">Ao enviar, você receberá uma resposta no seu e-mail em até 24h.</p>
     </section>
-
-    <!-- Contato Direto -->
-    <section class="py-12 container mx-auto text-center">
-        <h3 class="text-2xl font-bold mb-6">Fale Conosco Agora</h3>
-        <p class="mb-2">📍 Av. do Anastácio, 1641 – Pirituba, São Paulo</p>
-        <p class="mb-2">📞 <a href="tel:+5511959351849" class="text-blue-600 font-bold hover:underline">(11) 99999-9999</a></p>
-        <p class="mb-4">🕑 Seg a Sex: 9h às 18h e aos Sáb: 9h às 13h</p>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white text-center p-4">
-        &copy; 2025 LabancaSmart - Todos os direitos reservados.
-    </footer>
-</body>
-</html>
+    <section id="localizacao">
+        <h2>Onde Estamos</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.684245!2d-46.6566!3d-23.5810!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM0JzUxLjYiUyA0NsKwMzknMjMuOSJX!5e0!3m2!1spt-BR!2sbr!4v00000000000"></iframe>
+        </div>
+    </s
