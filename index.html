@@ -1,92 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LabancaSmart — Assistência Técnica em Pirituba (TV, Celular, Notebook)</title>
-  <meta name="description" content="LabancaSmart: assistência técnica em TVs, celulares e notebooks em Pirituba. Orçamento rápido, atendimento confiável e garantia no serviço." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LabancaSmart - Assistência Técnica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body{background:#f8f9fa}
-    .logo-img{max-height:64px}
-    .hero{background:#0d6efd;color:#fff;padding:60px 0}
-    .hero h1{font-weight:800}
-    .card-icon{font-size:32px}
-    .map-wrap{height:380px}
-    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.06)}
-    .footer{background:#111;color:#bbb}
+    body { scroll-behavior: smooth; }
+    .navbar-brand img { height: 50px; }
+    .btn-whatsapp {
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px; 
+      background-color: #25D366; 
+      color: white; 
+      border-radius: 50%; 
+      padding: 15px; 
+      font-size: 24px;
+      z-index: 1000;
+    }
+    .btn-whatsapp:hover { background-color: #1ebe5b; }
+    @media (max-width: 768px) {
+      .btn-call {
+        display: block;
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 24px;
+        z-index: 1000;
+      }
+    }
+    @media (min-width: 769px) {
+      .btn-call { display: none; }
+    }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
-        <!-- Coloque o arquivo LOGO.jpg na raiz do repositório -->
-        <img src="LOGO.jpg" alt="Labancasmart" class="logo-img" />
-        <span class="fw-bold">#Sua Assistência Especializada#</span>
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="LabancaSmart Logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Alternar navegação">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#avaliacoes">Avaliações</a></li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          <li class="nav-item"><a class="nav-link" href="#localizacao">Localização</a></li>
-          <li class="nav-item ms-lg-2">
-            <a href="https://wa.me/5511959351849" target="_blank" class="btn btn-success">WhatsApp</a>
-          </li>
-          <li class="nav-item d-block d-md-none">
-            <a href="tel:+5511959351849" class="btn btn-primary ms-lg-2 mt-2 mt-lg-0">Ligar Agora</a>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero text-center" id="top">
+  <!-- Hero -->
+  <header class="bg-primary text-white text-center py-5 mt-5">
     <div class="container">
-      <h1 class="display-5 mb-3">Assistência Técnica em TVs e Eletrônicos</h1>
-      <p class="lead mb-4">Conserto de TV (LED/placas/fonte), celulares e notebooks — atendimento rápido, peças de qualidade e garantia.</p>
-      <div class="d-flex justify-content-center gap-2">
-        <a href="https://wa.me/5511959351849" target="_blank" class="btn btn-light btn-lg text-nowrap">💬 WhatsApp</a>
-        <!-- Botão de ligação visível apenas em celular -->
-        <a href="tel:+5511959351849" class="btn btn-outline-light btn-lg d-block d-md-none text-nowrap">📞 Ligar Agora</a>
-      </div>
+      <h1 class="display-4">LabancaSmart</h1>
+      <p class="lead">Assistência Técnica Especializada em Eletrônicos</p>
     </div>
-  </section>
+  </header>
 
-  <!-- SERVIÇOS -->
-  <section class="py-5" id="servicos">
+  <!-- Serviços -->
+  <section id="servicos" class="py-5">
     <div class="container">
-      <h2 class="h3 fw-bold text-center mb-4">Nossos Serviços</h2>
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div class="card shadow-soft h-100">
-            <div class="card-body text-center">
-              <div class="card-icon">📺</div>
-              <h3 class="h5 mt-3">Conserto de TVs</h3>
-              <p class="text-muted">Troca de LEDs, reparo de fonte e placas, ajustes de imagem e som. Diagnóstico rápido.</p>
+      <h2 class="text-center mb-4">Nossos Serviços</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Manutenção em Notebooks</h5>
+              <p class="card-text">Reparo e otimização de notebooks e ultrabooks de diversas marcas.</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card shadow-soft h-100">
-            <div class="card-body text-center">
-              <div class="card-icon">📱</div>
-              <h3 class="h5 mt-3">Celulares & Tablets</h3>
-              <p class="text-muted">Troca de tela, bateria, conectores e serviços avançados de placa.</p>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Conserto de Consoles</h5>
+              <p class="card-text">Assistência para PlayStation, Xbox e outros consoles de videogame.</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="card shadow-soft h-100">
-            <div class="card-body text-center">
-              <div class="card-icon">💻</div>
-              <h3 class="h5 mt-3">Notebooks</h3>
-              <p class="text-muted">Upgrades, limpeza, troca de teclado/tela e reparos de placa-mãe.</p>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Reparo em TVs e Monitores</h5>
+              <p class="card-text">Troca de peças, ajustes e recuperação de imagem e áudio.</p>
             </div>
           </div>
         </div>
@@ -94,104 +101,57 @@
     </div>
   </section>
 
-  <!-- SOBRE / PROVA SOCIAL -->
-  <section class="py-5 bg-white">
+  <!-- Avaliações -->
+  <section id="avaliacoes" class="py-5 bg-light">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-12 col-lg-7">
-          <h2 class="h3 fw-bold mb-3">Por que escolher a LabancaSmart?</h2>
-          <ul class="list-unstyled mb-0">
-            <li>• Atendimento em Pirituba — <strong>Av. do Anastácio, 1641</strong>.</li>
-            <li>• Orçamento rápido e transparente.</li>
-            <li>• Garantia nos serviços e peças.</li>
-            <li>• Retirada/entrega de TV na região (consulte disponibilidade).</li>
-          </ul>
+      <h2 class="text-center mb-4">O que nossos clientes dizem</h2>
+      <div class="row">
+        <!-- Avaliação 1 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm p-3 rounded-3 h-100">
+            <div class="mb-2">⭐⭐⭐⭐⭐</div>
+            <p>"Atendimento excelente! Resolveram o problema do meu notebook em tempo recorde."</p>
+            <small class="text-muted">– João Silva</small>
+          </div>
         </div>
-        <div class="col-12 col-lg-5">
-          <div class="p-4 bg-light rounded-3 shadow-soft">
-            <h3 class="h6 fw-bold">Contato Direto</h3>
-            <div class="d-grid gap-2 mt-3">
-              <a href="https://wa.me/5511959351849" target="_blank" class="btn btn-success">Falar no WhatsApp</a>
-              <a href="tel:+5511959351849" class="btn btn-primary d-block d-md-none">Ligar Agora (celular)</a>
-            </div>
-            <p class="small text-muted mt-3 mb-0">Seg–Sáb: 9h–18h</p>
+        <!-- Avaliação 2 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm p-3 rounded-3 h-100">
+            <div class="mb-2">⭐⭐⭐⭐⭐</div>
+            <p>"Equipe muito atenciosa e profissional, recomendo a todos!"</p>
+            <small class="text-muted">– Maria Oliveira</small>
+          </div>
+        </div>
+        <!-- Avaliação 3 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm p-3 rounded-3 h-100">
+            <div class="mb-2">⭐⭐⭐⭐⭐</div>
+            <p>"Meu Iphone voltou a funcionar perfeitamente, ótimo custo-benefício."</p>
+            <small class="text-muted">– Carlos Andrade</small>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LOCALIZAÇÃO / MAPA -->
-  <section class="py-5" id="localizacao">
-    <div class="container">
-      <h2 class="h3 fw-bold text-center mb-4">Nossa Localização</h2>
-      <div class="map-wrap rounded-3 overflow-hidden shadow-soft">
-        <!-- Substitua por seu iframe de incorporação oficial do Google Maps, se desejar -->
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.3815905415487!2d-46.7372979001175!3d-23.494610348004638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef93e533ac957%3A0x33ef488238192720!2sLaBanca%20Smart%20-%20Troca%20de%20tela%20-%20Conserto%20de%20Celular%20-%20Notebook%20e%20Televis%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1756324283964!5m2!1spt-BR!2sbr" 
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <p class="text-center mt-3 mb-0">📍 Av. do Anastácio, 1641 – Pirituba, São Paulo</p>
-    </div>
-  </section>
-
-  <!-- CONTATO (Formspree) -->
-  <section class="py-5 bg-white" id="contato">
-    <div class="container">
-      <h2 class="h3 fw-bold text-center mb-4">Entre em Contato</h2>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-          <!-- Crie um formulário no Formspree e troque o action abaixo pelo seu endpoint -->
-          <form action="https://formspree.io/f/SEU_FORM_ID" method="POST" class="bg-light p-4 rounded-3 shadow-soft">
-            <div class="mb-3">
-              <label class="form-label">Nome</label>
-              <input type="text" name="nome" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">E-mail</label>
-              <input type="email" name="email" class="form-control" required />
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Mensagem</label>
-              <textarea name="mensagem" class="form-control" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Enviar</button>
-            <p class="small text-muted mt-2 mb-0">Ao enviar, você receberá a confirmação por e-mail.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer py-4 mt-4">
+  <!-- Contato -->
+  <section id="contato" class="py-5">
     <div class="container text-center">
-      <small>&copy; 2025 LabancaSmart — Todos os direitos reservados.</small>
+      <h2 class="mb-4">Entre em Contato</h2>
+      <p>Fale conosco para orçamentos e informações.</p>
+      <p><strong>Telefone:</strong> (11) 2337-0758</p>
+      <p><strong>Email:</strong> labancasmart@gmail.com.br</p>
     </div>
-  </footer>
+  </section>
 
-  <!-- SEO local: dados estruturados mínimos -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "LabancaSmart",
-    "image": "LOGO.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Av. do Anastácio, 1641",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "postalCode": "",
-      "addressCountry": "BR"
-    },
-    "telephone": "+55 11 95935-1849",
-    "url": "",
-    "areaServed": "Pirituba, São Paulo"
-  }
-  </script>
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/5511959351849" class="btn-whatsapp" target="_blank">💬</a>
+
+  <!-- Botão Ligar (somente celular) -->
+  <a href="tel:+5511959351849" class="btn-call">📞</a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
